@@ -1,4 +1,4 @@
-# RxAndroidDemo
+# RxAndroid Demo
 
 ### 参考资料:
 [有什么使用了RxJava或RxAndroid的开源项目？](https://www.zhihu.com/question/35511144)
@@ -183,5 +183,6 @@ Observable.from(names)
     });
 ```
 
-正如上面两个例子这样，创建出 Observable 和 Subscriber ，再用 subscribe() 将它们串起来，一次 RxJava 的基本使用就完成了。非常简单。
+正如例子这样，创建出 `Observable` 和 `Subscriber` ，再用 `subscribe()` 将它们串起来，一次 RxJava 的基本使用就完成了。非常简单。
+
 然而，在 RxJava 的默认规则中，事件的发出和消费都是在同一个线程的。也就是说，如果只用上面的方法，实现出来的只是一个同步的观察者模式。观察者模式本身的目的就是『后台处理，前台回调』的异步机制，因此异步对于 RxJava 是至关重要的。而要实现异步，则需要用到 RxJava 的另一个概念： `Scheduler` 。
