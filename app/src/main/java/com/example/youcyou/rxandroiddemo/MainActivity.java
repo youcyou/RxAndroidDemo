@@ -77,7 +77,8 @@ public class MainActivity extends AppCompatActivity {
                 ;
 
         observable.subscribe(observer);
-        ;
+
+
 //        observable.observeOn(Schedulers.immediate()).subscribeOn(Schedulers.newThread()).subscribe(observer);
 //
 //        Observable observable2 = Observable.just("Hello", "Hi", "Aloha");
